@@ -1,20 +1,17 @@
-# Docker Node MongoDB Example
+# Demo con Docker Node MongoDB 
 
-> Simple example of a dockerized Node/Mongo app
 
-## Quick Start
+## Comandos usados
 
 ```bash
-# Run in Docker
-docker-compose up
-# use -d flag to run in background
+# Run Docker Compose
+sudo docker-compose up
 
-# Tear down
-docker-compose down
+# Acceder a mongo
+sudo docker exec -it <id> mongo
 
-# To be able to edit files, add volume to compose file
-volumes: ['./:/usr/src/app']
+show dbs
+use
+db.items.find().pretty()
 
-# To re-build
-docker-compose build
-```
+
